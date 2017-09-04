@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ColorTalesApp</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen_splash_screen">ColorTales</string>
+
+    <string name="title_activity_cuento">Tales</string>
+
+    <string name="title_activity_estrellas">Rating</string>
+
+    <string name="title_activity_lista_cuentos">Tales List</string>
+    <string name="cuento_01">Billy y el Problema</string>
+    <string name="cuento_02">La Bella Aurora</string>
+    <string name="cuento_03">Leyenda de la Esmeralda</string>
+    <string name="cuento_04">La historia del arcoiris</string>
+    <string name="cuento_05">Leyenda del Aguila</string>
+    <string name="cuento_06">El origen de la lluvia</string>
+    <string name="title_activity_cuento_01">Cuento_01</string>
+
+    <string name="comment">Comentarios</string>
+    <string name="title_activity_acercade">Acerca de</string>
+
+    <string name="cuento_texto_01">Billy es un erizo que vive en el bosque y le cuesta controlar sus púas, a veces se distrae y sin querer molesta a los demás.</string>
+    <string name="cuento_texto_02">Mientras acampaba con sus amigos, Billy siempre terminaba en problemas por sus púas. Causando caos y alboroto.</string>
+    <string name="cuento_texto_03">Por la tarde Billy juega fútbol, hasta que golpea con su cabeza el balón y termino rompiéndolo, provocando el enfado de sus amigos.</string>
+    <string name="cuento_texto_04">Al final del día Billy se queda sin amigos, por todos los problemas que ha causado por culpa de sus púas.</string>
+    <string name="cuento_texto_05">Su mejor amiga la jirafa se acerca y le dice que todos los animales tienen sus cualidades y que sus púas lo hacen especial.</string>
+    <string name="cuento_texto_06">Billy tomo el consejo de su amiga y decide ser más cuidados con sus púas, peinándolas hacia atrás. Ya que no quiere quedarse sin amigos.</string>
+    <string name="cuento_texto_07">Billy no quiere quedarse solo y decide seguir de lejos a sus amigos, que van a jugar a una parte alejada del bosque.</string>
+    <string name="cuento_texto_08">De repente aparece un león, los amigos de Billy se esconden atrás de el. Billy se da cuenta que es el momento de usar sus púas para proteger a sus amigos.</string>
+    <string name="cuento_texto_09">El león se marchó, y los amigos de Billy se acercan a agradecerle, pues Billy aprendió a controlar sus púas y ahora todos lo admiran por su valor.</string>
+    <string name="cuento_texto_fin">FIN.</string>
+
+</resources>

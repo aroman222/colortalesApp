@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ColorTalesApp</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen_splash_screen">ColorTales</string>
+
+    <string name="title_activity_cuento">Cuento</string>
+
+    <string name="title_activity_estrellas">Rating</string>
+
+    <string name="title_activity_lista_cuentos">Lista de Cuentos</string>
+    <string name="cuento_02">Beatiful Aurora</string>
+    <string name="cuento_03">Legend of the Emerald</string>
+    <string name="cuento_01">Billy and the Problem</string>
+    <string name="cuento_04">The Rainbow Story</string>
+    <string name="cuento_05">Legend of the Eagle</string>
+    <string name="cuento_06">The origin of the rain</string>
+
+    <string name="title_activity_cuento_01">Cuento_01</string>
+
+    <string name="comment">Comments</string>
+
+    <string name="title_activity_acercade">About</string>
+
+    <string name="cuento_texto_01">Billy is a hedgehog who lives in the woods and finds it difficult to control his tines, sometimes distracted and unwittingly annoys others.</string>
+    <string name="cuento_texto_02">While camping with his friends, Billy always ended up in trouble by his spikes. Causing chaos and uproar.</string>
+    <string name="cuento_texto_03">In the afternoon Billy plays soccer, until he hits the ball with his head and ends up breaking it, causing the anger of his friends.</string>
+    <string name="cuento_texto_04">At the end of the day Billy is left without friends, for all the problems that he has caused because of his spikes.</string>
+    <string name="cuento_texto_05">Her Best Friend the giraffe approaches and tells her that all animals have their qualities and that their tines make it special.</string>
+    <string name="cuento_texto_06">Billy takes advice from his friend and decides to be more careful with his spikes, combing them back. Since he does not want to run out of friends.</string>
+    <string name="cuento_texto_07">Billy does not want to be alone and decides to follow his friends from afar, who are going to play a part away from the forest.</string>
+    <string name="cuento_texto_08">"Suddenly a lion appears, Billy's friends hide behind him. Billy realizes it's time to use his tines to protect his friends."</string>
+    <string name="cuento_texto_09">"The lion is gone, and Billy's friends come to thank him, for Billy has learned to control his tines and now everyone admires him for his courage."</string>
+    <string name="cuento_texto_fin">THE END.</string>
+
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="colortales.colortalesapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".FullscreenSplashScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen_splash_screen"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cuento"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_cuento"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Estrellas"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_estrellas"
+            android:parentActivityName=".Cuento"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="colortales.colortalesapp.Cuento" />
+        </activity>
+        <activity
+            android:name=".ListaCuentos"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_lista_cuentos"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Acercade"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_acercade"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme"></activity>
+    </application>
+
+</manifest>
