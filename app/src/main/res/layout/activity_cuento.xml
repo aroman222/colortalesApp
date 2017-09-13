@@ -131,12 +131,7 @@
                         android:background="@android:drawable/screen_background_dark_transparent"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/txt_cuento_texto"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cuento_texto_02"
-                            android:textSize="21sp" />
+
                     </LinearLayout>
                 </FrameLayout>
 
@@ -151,32 +146,6 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="246dp">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/c3" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|bottom"
-                        android:background="@android:drawable/screen_background_dark_transparent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txt_cuento_texto"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/cuento_texto_03"
-                            android:textSize="21sp" />
-                    </LinearLayout>
-                </FrameLayout>
 
             </LinearLayout>
 
