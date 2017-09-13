@@ -11,11 +11,35 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.amigold.fundapter.BindDictionary;
+import com.amigold.fundapter.FunDapter;
+import com.amigold.fundapter.extractors.StringExtractor;
+import com.amigold.fundapter.interfaces.DynamicImageLoader;
+import com.kosalgeek.android.json.JsonConverter;
+import com.kosalgeek.genasync12.AsyncResponse;
+import com.kosalgeek.genasync12.PostResponseAsyncTask;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class ListaCuentos extends AppCompatActivity {
+public class ListaCuentos extends AppCompatActivity{
+
+    final String LOG = "ListActivity";
+
+    private ArrayList<consulta_comentario> productList;
+    private ListView lvComentario;
+    private FunDapter<consulta_comentario> adapter;
 
     ImageButton myButton;
     ImageButton myButton2;

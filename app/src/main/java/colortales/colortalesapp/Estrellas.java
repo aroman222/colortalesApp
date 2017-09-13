@@ -2,15 +2,28 @@ package colortales.colortalesapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RatingBar;
+import android.widget.Toast;
+
+import java.util.HashMap;
+
+import com.kosalgeek.genasync12.AsyncResponse;
+
+import com.kosalgeek.genasync12.PostResponseAsyncTask;
+
+import android.provider.Settings.Secure;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -18,6 +31,10 @@ import android.widget.Button;
  */
 public class Estrellas extends AppCompatActivity {
 
+    final String LOG = "Guardar comentario";
+
+    private EditText comentario;
+    private RatingBar calificacion;
     Button btn_enviar;
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -99,6 +116,12 @@ public class Estrellas extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
+        final String android_id = Secure.getString(getContentResolver(), Secure.ANDROID_ID);
+
+        comentario = (EditText)findViewById(R.id.editText);
+
+        calificacion = (RatingBar)findViewById(R.id.ratingBar);
+
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
@@ -123,10 +146,36 @@ public class Estrellas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                HashMap postData = new HashMap();
+                postData.put("txtComentario", comentario.getText().toString());
+                postData.put("txtAndroidId", android_id.toString());
+                postData.put("txtPuntuacion", String.valueOf(calificacion.getRating()));
+                postData.put("txtCuento_id", "1");
+                postData.put("mobile", "android");
 
-                new consulta_comentario(Estrellas.this).execute();
+                PostResponseAsyncTask taskInsert = new PostResponseAsyncTask(Estrellas.this,
+                        postData, new AsyncResponse() {
+                    @Override
+                    public void processFinish(String s) {
+                        Log.d(LOG, s);
+                        if(s.contains("success")){
+                            Toast.makeText(Estrellas.this, "Gracias por tu comentario", Toast.LENGTH_LONG).show();
+                            Intent in = new Intent(Estrellas.this, FullscreenActivity.class);
+                            startActivity(in);
+                        }
+                        if(s.contains("existe")){
+                            Toast.makeText(Estrellas.this, "Ya ingresaste un comentario", Toast.LENGTH_LONG).show();
+                            Intent in = new Intent(Estrellas.this, FullscreenActivity.class);
+                            startActivity(in);
+                        }
+                    }
+                });
+                taskInsert.execute("http://color-tales.000webhostapp.com/server_ct/insert_comment.php");
 
-                startActivity(new Intent(Estrellas.this, FullscreenActivity.class)) ;
+                //new consulta_comentario(Estrellas.this).execute();
+                //finish();
+
+                //startActivity(new Intent(Estrellas.this, FullscreenActivity.class)) ;
             }
         });
 
